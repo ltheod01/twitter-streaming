@@ -3,15 +3,15 @@ from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
 import tweepy
-import twitter_credentials
-import pandas as pd
 from csv import writer
-import matplotlib.pyplot as plt
-import numpy as np
 import json
 from textblob import TextBlob
 import re
 import csv
+
+
+#This is the file where you store your twitter user_credentials
+import twitter_credentials
 
 #This part is to take care of emojis & characters that are outside
 #the BMP (Basic Multilingual Plane

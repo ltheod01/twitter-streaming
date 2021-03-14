@@ -14,8 +14,7 @@ import csv
 import twitter_credentials
 
 #This part is to take care of emojis & characters that are outside
-#the BMP (Basic Multilingual Plane
-
+#the BMP (Basic Multilingual Plane)
 import sys
 non_bmp_map = dict.fromkeys(range(0x10000, sys.maxunicode + 1), 0xfffd)
 

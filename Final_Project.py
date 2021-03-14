@@ -25,14 +25,6 @@ non_bmp_map = dict.fromkeys(range(0x10000, sys.maxunicode + 1), 0xfffd)
 auth = tweepy.OAuthHandler(twitter_credentials.CONSUMER_KEY, twitter_credentials.CONSUMER_SECRET)
 auth.set_access_token(twitter_credentials.ACCESS_TOKEN, twitter_credentials.ACCESS_TOKEN_SECRET)
 
-#Give the words you want the program to track on sentiment analysis
-
-positive_wording = ['buy', 'hold', 'hodl', 'long', 'appreciation', 'boost',
-                    'attractive', 'accelerate', 'rise', 'rising', 'outperform'
-                    ]
-negative_wording = ['sell', 'short', 'sel', 'shor', 'shrt', 'trash', 'junk',
-                    'adversely', 'bad', 'decline', 'decelerate', 'drop', 'underperform'
-                    ]
 n = 0
 
 #Opening the csv file to write the data in order to plot them in another program

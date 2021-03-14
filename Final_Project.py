@@ -20,7 +20,7 @@ non_bmp_map = dict.fromkeys(range(0x10000, sys.maxunicode + 1), 0xfffd)
 
 
 #Pass the authenticate codes to access the twitter api.  Those were saved on another
-#program called twitter_credentials
+#program called twitter_credentials which you need to create including your credentials to access twitter.
 auth = tweepy.OAuthHandler(twitter_credentials.CONSUMER_KEY, twitter_credentials.CONSUMER_SECRET)
 auth.set_access_token(twitter_credentials.ACCESS_TOKEN, twitter_credentials.ACCESS_TOKEN_SECRET)
 

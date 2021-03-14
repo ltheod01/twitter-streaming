@@ -11,7 +11,7 @@ import csv
 
 
 #This is the file where you store your twitter user_credentials
-import twitter_credentials
+import your_twitter_credentials
 
 #This part is to take care of emojis & characters that are outside
 #the BMP (Basic Multilingual Plane)
@@ -21,8 +21,8 @@ non_bmp_map = dict.fromkeys(range(0x10000, sys.maxunicode + 1), 0xfffd)
 
 #Pass the authenticate codes to access the twitter api.  Those were saved on another
 #program called twitter_credentials which you need to create including your credentials to access twitter.
-auth = tweepy.OAuthHandler(twitter_credentials.CONSUMER_KEY, twitter_credentials.CONSUMER_SECRET)
-auth.set_access_token(twitter_credentials.ACCESS_TOKEN, twitter_credentials.ACCESS_TOKEN_SECRET)
+auth = tweepy.OAuthHandler(your_twitter_credentials.CONSUMER_KEY, your_twitter_credentials.CONSUMER_SECRET)
+auth.set_access_token(your_twitter_credentials.ACCESS_TOKEN, your_twitter_credentials.ACCESS_TOKEN_SECRET)
 
 n = 0
 

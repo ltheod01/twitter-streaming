@@ -66,8 +66,6 @@ class StdOutListener(StreamListener):
             global doge
             global variable1_lib
             global variable2_lib
-            global positive_wording
-            global negative_wording
 
             score_variable1 = 0
             score_variable2 = 0

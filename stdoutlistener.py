@@ -45,21 +45,15 @@ class StdOutListener(StreamListener):
 
             for sent in blob.sentences:
                 
-                intersection_set3 = set.intersection(set(sent.lower().split()), set(self.assvar1), set(self.assvar2))
                 intersection_set21 = set.intersection(set(sent.lower().split()), set(self.assvar1))
                 intersection_set22 = set.intersection(set(sent.lower().split()), set(self.assvar2))
                 sentiment = sent.sentiment.polarity
 
                 
-                if not len(intersection_set3)==0:
-                    score_variable1 += followers*sentiment
-                    score_variable2 += followers*sentiment    
-                elif len(intersection_set21)!=0:
-                    score_variable1 += followers*sentiment
-                elif len(intersection_set22)!=0:
-                    score_variable2 = score_variable2 + followers*sentiment
-
-
+                if len(intersection_set21)>0:
+                    score_variable1 += followers*sentiment    
+                if len(intersection_set22)>0:
+                    score_variable2 += followers*sentiment
 
             with open('sentiment.csv','a') as file:
                 writer = csv.DictWriter(file, fieldnames = header_name)
